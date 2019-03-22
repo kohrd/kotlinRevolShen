@@ -55,14 +55,33 @@ fun main(args: Array<String>) {
 //
 //    }
 
+// 5
+//    val naszaStala: Int = 23
+//    var naszaLiczba: Int = readLine()!!.toInt(); // cast to Int
+//    println("podaj liczbe")
+//    if (naszaLiczba >= naszaStala) println("wieksza")
+//    else if(naszaLiczba%2 == 0) println("podana liczba jest mniejsza niz stala oraz jest parzysta")
+//    else println("podana liczba jest mnniejsza nisz stala -> $naszaStala oraz nieparzytsa")
 
-    val naszaStala: Int = 23
-    var naszaLiczba: Int = readLine()!!.toInt(); // cast to Int
-    println("podaj liczbe")
-    if (naszaLiczba >= naszaStala) println("wieksza")
-    else if(naszaLiczba%2 == 0) println("podana liczba jest mniejsza niz stala oraz jest parzysta")
-    else println("podana liczba jest mnniejsza nisz stala -> $naszaStala oraz nieparzytsa")
 
+    // 6 petle
+/*
+    for (i in 1..20) println ("i in 1..20 $i")
+    for(i in 5 downTo -23) println ("licznik i in 5 downTo -23 $i")
+    for(i in 100 downTo -20 step 5) println("i in 100 downTo -20 step 5 $i")
+*/
+
+    println("ile czasu chcesz odmierzyc?")
+    var czas: Int = readLine()!!.toInt()
+    for (i in czas downTo 0) {
+        if (i != 0) {
+            println(i)
+            Thread.sleep(100) // zatrzymanie watku o 1000 ms
+
+        } else {
+            println("koniec czasu")
+        }
+    }
 }
 
 
