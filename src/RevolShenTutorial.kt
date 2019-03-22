@@ -28,32 +28,40 @@ fun main(args: Array<String>) {
 //    println("sdsd")
 //    println((2+2)*2)
 
+//4
+//    var czySieRusza: String
+//    var czyPowinnoSieRuszac: String
+//    println("czy cos sie rusza?")
+//    // czySieRusza = readLine()!! // jestesmy pewni ze zmienna nie bedzie nulem
+//    czySieRusza = readLine()!!.toUpperCase()
+//
+//    if (czySieRusza == "TAK") {
+//        println("a powinno sie ruszac?")
+//        czyPowinnoSieRuszac = readLine()!!.toUpperCase()
+//        if (czyPowinnoSieRuszac == "NIE") {
+//            println("uzyj tasmy")
+//        } else {
+//            println("to nie bylo probelmu")
+//        }
+//    }
+//    else { // czyli jesli sie nie rusza
+//        println("a powinno si eruszac?")
+//        czyPowinnoSieRuszac = readLine()!!.toUpperCase()
+//        if (czyPowinnoSieRuszac == "NIE") {
+//            println("to nie ma problemu")
+//        } else {
+//            println("to uzyj wd40")
+//        }
+//
+//    }
 
-    var czySieRusza: String
-    var czyPowinnoSieRuszac: String
-    println("czy cos sie rusza?")
-    // czySieRusza = readLine()!! // jestesmy pewni ze zmienna nie bedzie nulem
-    czySieRusza = readLine()!!.toUpperCase()
 
-    if (czySieRusza == "TAK") {
-        println("a powinno sie ruszac?")
-        czyPowinnoSieRuszac = readLine()!!.toUpperCase()
-        if (czyPowinnoSieRuszac == "NIE") {
-            println("uzyj tasmy")
-        } else {
-            println("to nie bylo probelmu")
-        }
-    }
-    else { // czyli jesli sie nie rusza
-        println("a powinno si eruszac?")
-        czyPowinnoSieRuszac = readLine()!!.toUpperCase()
-        if (czyPowinnoSieRuszac == "NIE") {
-            println("to nie ma problemu")
-        } else {
-            println("to uzyj wd40")
-        }
-
-    }
+    val naszaStala: Int = 23
+    var naszaLiczba: Int = readLine()!!.toInt(); // cast to Int
+    println("podaj liczbe")
+    if (naszaLiczba >= naszaStala) println("wieksza")
+    else if(naszaLiczba%2 == 0) println("podana liczba jest mniejsza niz stala oraz jest parzysta")
+    else println("podana liczba jest mnniejsza nisz stala -> $naszaStala oraz nieparzytsa")
 
 }
 
