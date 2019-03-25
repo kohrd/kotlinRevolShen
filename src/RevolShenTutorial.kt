@@ -222,6 +222,8 @@ when (jakisObiekt) {
     }
         */
 
+/*
+// ##@$@#@#@##@#@  11 try catch
 fun pierwiastek(liczba: Double): Double {
     if (liczba < 0) {
         throw ArithmeticException("podales liczbe ujemna")
@@ -230,7 +232,7 @@ fun pierwiastek(liczba: Double): Double {
 }
 
 fun main(vargs: Array<String>) {
-    // ##@$@#@#@##@#@  11 try catch
+
 
     while (true) {
         println("podaj liczbe do sperwiastkowania")
@@ -253,6 +255,41 @@ fun main(vargs: Array<String>) {
     // zadanie stworz  program ktory pozwoli dostac sie do wybranego elementu tablicy
     // zabezpieczyc program zeby uzytkownik nie mogl
     // odwlac sie do nieistniejacego elementu tablicy
+
+*/
+
+
+class Pies(waga: Int, glos: Int) {
+    var waga = waga;
+    var glos = glos;
+
+    fun dajGlos() {
+        for (i in 1..this.glos) {
+            println("$i wuf wuf")
+        }
+    }
+
+}
+
+fun walkiPsow(pies1: Pies, pies2: Pies){
+    if (pies1.glos > pies2.glos){
+        println("pies 1 wygral")
+    }else if(pies2.glos > pies1.glos){
+        println("pies 2 wygral")
+    }else{
+        println("remis!")
+    }
+}
+
+//  ##@$@#@#@##@#@  11 try catch
+fun main(vargs: Array<String>) {
+    var azor: Pies = Pies(1, 14); // podanie typu za nazwa nie jest wymagane jest zbyteczne
+    var burek = Pies(2, 3);
+
+    burek.dajGlos()
+    azor.dajGlos()
+
+    walkiPsow(azor, burek)
 
 
 }
