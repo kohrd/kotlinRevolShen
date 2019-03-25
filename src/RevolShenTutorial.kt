@@ -133,6 +133,7 @@ fun main(args: Array<String>) {
 */
 
 // ##@$@#@#@##@#@  8 when i typ any (switch)
+    /*
     var jakisObiekt: Any = 3.14159F// typ Any nadrzedna klasa dla wszytskich jak Obiect w java
 //    println("wpisz cos na klawiaturze")
 //    jakisObiekt = readLine()!!
@@ -157,6 +158,38 @@ fun main(args: Array<String>) {
         }
         else -> println ("stworzyles jakis dziwny typ") // to jest wykonyywane jesli zaden powyzszy warunek nie jest spelniony
     }
+
+    */
+
+    // ##@$@#@#@##@#@  9 tablice i petla for each
+
+//    var stanMagazynuAny = arrayOfNulls<Any>(10); // ale są tablice byteArrayOf booleanArrayOf  intArrayOf
+//    var stanMagazynuString = arrayOfNulls<String>(10);
+//    var tablicaintow = intArrayOf(23,4,5,6,6,4,3,2,2) // inty
+//    var tablicaChar = charArrayOf('d','f','r','f') // chary
+//    var tablicaMieszana = arrayOf(3,2,"sfdsd", 3,6,'s') // mieszane typy
+//
+//    // inputy do tablicy
+//    stanMagazynuAny[1] = 23;
+//    stanMagazynuAny[2] = "wfwef";
+
+    // z kursu
+    var tablica :Array<String> = arrayOf("Artur", "Andrzej", "Blazek", "Gosia")
+
+    for (imie: String in tablica){
+        var dlugoscStringa: Int = imie.length
+        println (dlugoscStringa)
+        while (dlugoscStringa > 0){
+
+            println(imie[dlugoscStringa - 1])
+            dlugoscStringa --
+        }
+    }
+
+
+
+
+
 }
 
 
