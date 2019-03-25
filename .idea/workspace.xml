@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a4f9ca5-0e63-409f-bf77-2d83158bb3ab" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/kotlinRevolShen/RevolShenTutorialKt.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/kotlinRevolShen/RevolShenTutorialKt.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/RevolShenTutorial.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/RevolShenTutorial.kt" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,10 +16,10 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/RevolShenTutorial.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="132" column="31" selection-start-line="132" selection-start-column="31" selection-end-line="132" selection-end-column="31" />
+            <state relative-caret-position="120">
+              <caret line="135" column="35" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
               <folding>
-                <element signature="e#0#106#0" expanded="true" />
+                <element signature="e#0#169#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -74,7 +72,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553507143913" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553509544544" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -134,15 +132,15 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49848714" visible="true" weight="0.3289689" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.494705" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5015129" side_tool="true" visible="true" weight="0.3289689" />
+      <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.505295" side_tool="true" visible="true" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.32972974" />
+      <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49621785" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -156,10 +154,10 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/RevolShenTutorial.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="132" column="31" selection-start-line="132" selection-start-column="31" selection-end-line="132" selection-end-column="31" />
+        <state relative-caret-position="120">
+          <caret line="135" column="35" selection-start-line="135" selection-start-column="35" selection-end-line="135" selection-end-column="35" />
           <folding>
-            <element signature="e#0#106#0" expanded="true" />
+            <element signature="e#0#169#0" expanded="true" />
           </folding>
         </state>
       </provider>

@@ -1,5 +1,7 @@
 import com.sun.org.apache.xml.internal.utils.DefaultErrorHandler
+import javafx.beans.binding.When
 import jdk.nashorn.internal.lookup.Lookup
+import kotlin.math.roundToInt
 
 fun main(args: Array<String>) {
 
@@ -130,11 +132,38 @@ fun main(args: Array<String>) {
 
 */
 
-// ##@$@#@#@##@#@  8 when i any
+// ##@$@#@#@##@#@  8 when i typ any (switch)
+    var jakisObiekt: Any = 3.14159F// typ Any nadrzedna klasa dla wszytskich jak Obiect w java
+//    println("wpisz cos na klawiaturze")
+//    jakisObiekt = readLine()!!
 
+    when (jakisObiekt) {
+        is String -> {
+            println("to jest string ${jakisObiekt.toUpperCase()} ")
+        }
 
-
+        is Int -> {
+            println("to jest int, ${jakisObiekt + 12}")
+        }
+        is Float -> {
+            println("to jest float $jakisObiekt")
+            println("a tu zaokroalony do inta ${jakisObiekt.roundToInt()}")
+        }
+        is Char -> {
+            println("to jest char $jakisObiekt")
+        }
+        is Long -> {
+            println("to jest long $jakisObiekt")
+        }
+        else -> println ("stworzyles jakis dziwny typ") // to jest wykonyywane jesli zaden powyzszy warunek nie jest spelniony
+    }
 }
+
+
+
+
+
+
 
 
 
