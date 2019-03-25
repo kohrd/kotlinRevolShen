@@ -2,7 +2,9 @@ import com.sun.org.apache.xml.internal.utils.DefaultErrorHandler
 import jdk.nashorn.internal.lookup.Lookup
 
 fun main(args: Array<String>) {
-//2
+
+
+// ##@$@#@#@##@#@ 2
 
 //    var zmienna1: String = "Konrad ";
 //    var zmienna2: String;
@@ -28,7 +30,8 @@ fun main(args: Array<String>) {
 //    println("sdsd")
 //    println((2+2)*2)
 
-//4
+
+// ##@$@#@#@##@#@ 4
 //    var czySieRusza: String
 //    var czyPowinnoSieRuszac: String
 //    println("czy cos sie rusza?")
@@ -55,8 +58,9 @@ fun main(args: Array<String>) {
 //
 //    }
 
-// 5
-//    val naszaStala: Int = 23
+
+// ##@$@#@#@##@#@  5
+//    val naszaStala: Int = 23 // val to stala a var to zmienna
 //    var naszaLiczba: Int = readLine()!!.toInt(); // cast to Int
 //    println("podaj liczbe")
 //    if (naszaLiczba >= naszaStala) println("wieksza")
@@ -64,24 +68,72 @@ fun main(args: Array<String>) {
 //    else println("podana liczba jest mnniejsza nisz stala -> $naszaStala oraz nieparzytsa")
 
 
-    // 6 petle
+// ##@$@#@#@##@#@  6 petle
 /*
     for (i in 1..20) println ("i in 1..20 $i")
     for(i in 5 downTo -23) println ("licznik i in 5 downTo -23 $i")
     for(i in 100 downTo -20 step 5) println("i in 100 downTo -20 step 5 $i")
 */
 
-    println("ile czasu chcesz odmierzyc?")
-    var czas: Int = readLine()!!.toInt()
-    for (i in czas downTo 0) {
-        if (i != 0) {
-            println(i)
-            Thread.sleep(100) // zatrzymanie watku o 1000 ms
+//    println("ile czasu chcesz odmierzyc?")
+//    var czas: Int = readLine()!!.toInt()
+//    for (i in czas downTo 0) {
+//        if (i != 0) {
+//            println(i)
+//            Thread.sleep(100) // zatrzymanie watku o 1000 ms
+//
+//        } else {
+//            println("koniec czasu")
+//        }
+//    }
 
-        } else {
-            println("koniec czasu")
+
+// ##@$@#@#@##@#@ 7 while i do while and or etukiety petli
+    /*
+//    var x: Int = 0;
+//    while (x < 199){
+//        println(x)
+//        x++
+//    }
+    val password: String = "123"
+    val user: String = "admin"
+
+    var givenUserName: String
+    var givenPassword: String
+
+    while (true) {
+        println("podaj login")
+        givenUserName = readLine()!!;
+        println("podaj haslo")
+        givenPassword = readLine()!!;
+
+        if ((user == givenUserName) && (password == givenPassword)){
+            print ("czesc $givenUserName z haslem $givenPassword")
+            break;
+
+        }else{
+            println("bledny login lub haslo sprobuj ponownie")
+//            continue; // nie musi byc continue bo jedyna mozliwosc przerwania petli do podanie prawidlowych danych
         }
     }
+
+
+    petlaZewnetrzna@ for (i in 1 until 100) { // do 99 wlacznie // etykieta petli zewnetrznej
+        petlaWewnetrzna@ for (j in 1..100) { // do 100 wlacznie // etykieta petli wewnetrznej
+            println("i $i j $j")
+            if (i == 13) {
+                break@petlaZewnetrzna // przerwanie petli zewnetrznej
+            }
+
+        }
+    }
+
+*/
+
+// ##@$@#@#@##@#@  8 when i any
+
+
+
 }
 
 
