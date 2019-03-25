@@ -1,0 +1,9 @@
+2 zmienne typy
+4 if else
+5 porowania stale i zmienne
+6 petle for i in 1..20 downTo  zatrzymanie thread
+7 while do while etykiety petli
+8 when switch typ nadrzedny any
+9 tablica i petla for each
+10 wlasne funkcje parametr w definicji a argument to to dajemy w uzyciu
+11

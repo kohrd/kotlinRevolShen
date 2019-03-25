@@ -3,7 +3,7 @@ import javafx.beans.binding.When
 import jdk.nashorn.internal.lookup.Lookup
 import kotlin.math.roundToInt
 
-fun main(args: Array<String>) {
+//fun main(args: Array<String>) {
 
 
 // ##@$@#@#@##@#@ 2
@@ -172,7 +172,7 @@ fun main(args: Array<String>) {
 //    // inputy do tablicy
 //    stanMagazynuAny[1] = 23;
 //    stanMagazynuAny[2] = "wfwef";
-
+/*
     // z kursu
     var tablica :Array<String> = arrayOf("Artur", "Andrzej", "Blazek", "Gosia")
 
@@ -186,11 +186,47 @@ fun main(args: Array<String>) {
         }
     }
 
+*/
+
+
+    // ##@$@#@#@##@#@  10 wlasne funkcje
+
+
+    fun mnozenieDwochLiczb(czynnik1: Int, czynnik2: Int): Int {
+        return czynnik1 * czynnik2
+    }
 
 
 
 
-}
+    fun sumaCyfr(liczba: Int): Int {
+        var wynik: Int = 0;
+        var cyfra: Int;
+        var number: Int =
+            liczba; // trzeba przechwycic przekazywana liczbe bo nie mozemy na argumencie wykonywac operacji
+
+        while (number > 0) {
+            cyfra = number % 10
+            wynik += cyfra // wynik = wynik + cyfra
+            number /= 10
+        }
+        return wynik
+    }
+
+    fun main(vargs: Array<String>){
+        // to jesat funkcja main
+        println(mnozenieDwochLiczb(sumaCyfr(12345), sumaCyfr(6789)))
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 
