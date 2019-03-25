@@ -1,7 +1,10 @@
 import com.sun.org.apache.xml.internal.utils.DefaultErrorHandler
 import javafx.beans.binding.When
 import jdk.nashorn.internal.lookup.Lookup
+import java.lang.ArithmeticException
+import java.lang.NumberFormatException
 import kotlin.math.roundToInt
+import kotlin.math.sqrt
 
 //fun main(args: Array<String>) {
 
@@ -91,77 +94,77 @@ import kotlin.math.roundToInt
 
 
 // ##@$@#@#@##@#@ 7 while i do while and or etukiety petli
-    /*
+/*
 //    var x: Int = 0;
 //    while (x < 199){
 //        println(x)
 //        x++
 //    }
-    val password: String = "123"
-    val user: String = "admin"
+val password: String = "123"
+val user: String = "admin"
 
-    var givenUserName: String
-    var givenPassword: String
+var givenUserName: String
+var givenPassword: String
 
-    while (true) {
-        println("podaj login")
-        givenUserName = readLine()!!;
-        println("podaj haslo")
-        givenPassword = readLine()!!;
+while (true) {
+    println("podaj login")
+    givenUserName = readLine()!!;
+    println("podaj haslo")
+    givenPassword = readLine()!!;
 
-        if ((user == givenUserName) && (password == givenPassword)){
-            print ("czesc $givenUserName z haslem $givenPassword")
-            break;
+    if ((user == givenUserName) && (password == givenPassword)){
+        print ("czesc $givenUserName z haslem $givenPassword")
+        break;
 
-        }else{
-            println("bledny login lub haslo sprobuj ponownie")
+    }else{
+        println("bledny login lub haslo sprobuj ponownie")
 //            continue; // nie musi byc continue bo jedyna mozliwosc przerwania petli do podanie prawidlowych danych
-        }
     }
+}
 
 
-    petlaZewnetrzna@ for (i in 1 until 100) { // do 99 wlacznie // etykieta petli zewnetrznej
-        petlaWewnetrzna@ for (j in 1..100) { // do 100 wlacznie // etykieta petli wewnetrznej
-            println("i $i j $j")
-            if (i == 13) {
-                break@petlaZewnetrzna // przerwanie petli zewnetrznej
-            }
-
+petlaZewnetrzna@ for (i in 1 until 100) { // do 99 wlacznie // etykieta petli zewnetrznej
+    petlaWewnetrzna@ for (j in 1..100) { // do 100 wlacznie // etykieta petli wewnetrznej
+        println("i $i j $j")
+        if (i == 13) {
+            break@petlaZewnetrzna // przerwanie petli zewnetrznej
         }
+
     }
+}
 
 */
 
 // ##@$@#@#@##@#@  8 when i typ any (switch)
-    /*
-    var jakisObiekt: Any = 3.14159F// typ Any nadrzedna klasa dla wszytskich jak Obiect w java
+/*
+var jakisObiekt: Any = 3.14159F// typ Any nadrzedna klasa dla wszytskich jak Obiect w java
 //    println("wpisz cos na klawiaturze")
 //    jakisObiekt = readLine()!!
 
-    when (jakisObiekt) {
-        is String -> {
-            println("to jest string ${jakisObiekt.toUpperCase()} ")
-        }
-
-        is Int -> {
-            println("to jest int, ${jakisObiekt + 12}")
-        }
-        is Float -> {
-            println("to jest float $jakisObiekt")
-            println("a tu zaokroalony do inta ${jakisObiekt.roundToInt()}")
-        }
-        is Char -> {
-            println("to jest char $jakisObiekt")
-        }
-        is Long -> {
-            println("to jest long $jakisObiekt")
-        }
-        else -> println ("stworzyles jakis dziwny typ") // to jest wykonyywane jesli zaden powyzszy warunek nie jest spelniony
+when (jakisObiekt) {
+    is String -> {
+        println("to jest string ${jakisObiekt.toUpperCase()} ")
     }
 
-    */
+    is Int -> {
+        println("to jest int, ${jakisObiekt + 12}")
+    }
+    is Float -> {
+        println("to jest float $jakisObiekt")
+        println("a tu zaokroalony do inta ${jakisObiekt.roundToInt()}")
+    }
+    is Char -> {
+        println("to jest char $jakisObiekt")
+    }
+    is Long -> {
+        println("to jest long $jakisObiekt")
+    }
+    else -> println ("stworzyles jakis dziwny typ") // to jest wykonyywane jesli zaden powyzszy warunek nie jest spelniony
+}
 
-    // ##@$@#@#@##@#@  9 tablice i petla for each
+*/
+
+// ##@$@#@#@##@#@  9 tablice i petla for each
 
 //    var stanMagazynuAny = arrayOfNulls<Any>(10); // ale są tablice byteArrayOf booleanArrayOf  intArrayOf
 //    var stanMagazynuString = arrayOfNulls<String>(10);
@@ -189,9 +192,9 @@ import kotlin.math.roundToInt
 */
 
 
-    // ##@$@#@#@##@#@  10 wlasne funkcje
+// ##@$@#@#@##@#@  10 wlasne funkcje
 
-
+/*
     fun mnozenieDwochLiczb(czynnik1: Int, czynnik2: Int): Int {
         return czynnik1 * czynnik2
     }
@@ -217,23 +220,39 @@ import kotlin.math.roundToInt
         // to jesat funkcja main
         println(mnozenieDwochLiczb(sumaCyfr(12345), sumaCyfr(6789)))
     }
+        */
+
+fun pierwiastek(liczba: Double): Double {
+    if (liczba < 0) {
+        throw ArithmeticException("podales liczbe ujemna")
+    }
+    return sqrt(liczba)
+}
+
+fun main(vargs: Array<String>) {
+    // ##@$@#@#@##@#@  11 try catch
+
+    while (true) {
+        println("podaj liczbe do sperwiastkowania")
+        var liczbaInput: String = readLine()!!;
+
+        try {
+            println(pierwiastek(liczbaInput.toDouble()))
+        } catch (wyjatek: NumberFormatException) {
+            println(wyjatek)
+            println("nieprawidlowe dane wejsciowe")
+        } catch (wyjatek: ArithmeticException) {
+            // przechwycenie wyjatku z funkcji pierwiastek
+            println(wyjatek.message)
+        } catch (kazdyInnyWyjatek: Exception) {
+            // obsluga kazdego innego wyjatku
+            println(kazdyInnyWyjatek)
+        }
+    }
+    // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    // zadanie stworz  program ktory pozwoli dostac sie do wybranego elementu tablicy
+    // zabezpieczyc program zeby uzytkownik nie mogl
+    // odwlac sie do nieistniejacego elementu tablicy
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}

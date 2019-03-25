@@ -6,4 +6,4 @@
 8 when switch typ nadrzedny any
 9 tablica i petla for each
 10 wlasne funkcje parametr w definicji a argument to to dajemy w uzyciu
-11
+11 try catch
