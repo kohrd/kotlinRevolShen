@@ -1,6 +1,7 @@
 import com.sun.org.apache.xml.internal.utils.DefaultErrorHandler
 import javafx.beans.binding.When
 import jdk.nashorn.internal.lookup.Lookup
+import java.io.File
 import java.lang.ArithmeticException
 import java.lang.NumberFormatException
 import kotlin.math.roundToInt
@@ -36,6 +37,14 @@ import kotlin.math.sqrt
 //    println((2+2)*2)
 
 
+
+
+
+
+
+
+
+
 // ##@$@#@#@##@#@ 4
 //    var czySieRusza: String
 //    var czyPowinnoSieRuszac: String
@@ -62,6 +71,14 @@ import kotlin.math.sqrt
 //        }
 //
 //    }
+
+
+
+
+
+
+
+
 
 
 // ##@$@#@#@##@#@  5
@@ -91,6 +108,15 @@ import kotlin.math.sqrt
 //            println("koniec czasu")
 //        }
 //    }
+
+
+
+
+
+
+
+
+
 
 
 // ##@$@#@#@##@#@ 7 while i do while and or etukiety petli
@@ -135,6 +161,15 @@ petlaZewnetrzna@ for (i in 1 until 100) { // do 99 wlacznie // etykieta petli ze
 
 */
 
+
+
+
+
+
+
+
+
+
 // ##@$@#@#@##@#@  8 when i typ any (switch)
 /*
 var jakisObiekt: Any = 3.14159F// typ Any nadrzedna klasa dla wszytskich jak Obiect w java
@@ -164,6 +199,16 @@ when (jakisObiekt) {
 
 */
 
+
+
+
+
+
+
+
+
+
+
 // ##@$@#@#@##@#@  9 tablice i petla for each
 
 //    var stanMagazynuAny = arrayOfNulls<Any>(10); // ale są tablice byteArrayOf booleanArrayOf  intArrayOf
@@ -190,6 +235,16 @@ when (jakisObiekt) {
     }
 
 */
+
+
+
+
+
+
+
+
+
+
 
 
 // ##@$@#@#@##@#@  10 wlasne funkcje
@@ -223,6 +278,22 @@ when (jakisObiekt) {
         */
 
 /*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ##@$@#@#@##@#@  11 try catch
 fun pierwiastek(liczba: Double): Double {
     if (liczba < 0) {
@@ -257,6 +328,26 @@ fun main(vargs: Array<String>) {
     // odwlac sie do nieistniejacego elementu tablicy
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*
@@ -294,6 +385,23 @@ fun main(vargs: Array<String>) {
     walkiPsow(azor, burek)
 
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // ##@$@#@#@##@#@  13 dziedziczenie
 /*
@@ -477,11 +585,60 @@ fun main(vargs: Array<String>) {
 }
 */
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ##@$@#@#@##@#@  15 wczytywanie danych z pliku
+
+
+fun wczytjaPlik(path: String): List<String>{
+    var plik: File = File(path)
+
+//    println(plik.absolutePath)
+//    println(plik.path)
+//    println(plik.canonicalPath)
+
+    return plik.readLines()
+}
+
+fun policzSredniaPliku(listaStringow: List<String>){
+    var listLength: Int = listaStringow.size
+    var sumOfItems: Double = 0.0
+    var average: Double = 0.0
+
+
+    for (string: String in listaStringow) {
+        println(string)
+        sumOfItems = sumOfItems + string.toInt()!!
+    }
+
+    println("sumOfItems: $sumOfItems")
+    average = sumOfItems / listLength
+    println("average: $average")
+    println("po zaokragleniu: %.2f".format(average)) // formatowanie
+    println("po zaokragleniu: %.2E".format(average)) // notacja naukkowa
+
+}
+
+
 fun main(vargs: Array<String>) {
 
-    var konrasd: String = "rverver"
-    konrasd = "verwwef";
+    var filePath = "C:\\Users\\Gosia_Konrad\\Desktop\\batteryInventory\\kotlinRevolShen\\wczytywanieDnaychZplikuCwiczenie15.txt"
 
+print(policzSredniaPliku(wczytjaPlik(filePath)))
 
 
 
