@@ -32,7 +32,8 @@
             abstract fun jakasFunkcja()
             override fun funkcjaNadpisanaWklasiePotomnej
 
-
+19 companionObject i statyczne czyli ze nie trzeba robic instancji zeby uzyc pola lub metody
+20 interfejsy
 
 
 

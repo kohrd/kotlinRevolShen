@@ -714,12 +714,74 @@ fun main(vargs: Array<String>) {
 
 
 
-// ##@$@#@#@##@#@  17 wykoszona tablica i zapis do pliku
+// ##@$@#@#@##@#@  19 static czyli uzywane bez potrzby tworzenia instancji
+
+/*
+
+class MyClass(){
+
+    companion object { // to oznacza ze sa to obiekty statyczne
+        var liczba = 10;
+        fun funkcja(){
+            println("yo!")
+        }
+    }
+
+}
+fun main(vargs: Array<String>) {
+
+    var x = MyClass();
+    print(MyClass.liczba) //to jest statyczne
+    print(MyClass.funkcja()) // top tez
+
+}
+
+        */
+
+
+
+
+
+
+
+
+
+
+// ##@$@#@#@##@#@  20 interfejsy
+
+interface ObslugaDanych{
+ // nie ma nazwiasow zwyklych bo to jest konstruktor a interfejs nie ma konstruktora
+    // METODY W INTERFEJSIE NIE POSIADAJA BODY
+    fun podajImiona(): List<String>
+    fun wypiszImiona(imiona: List<String>)
+}
+
+class MojeDane: ObslugaDanych{
+
+    override fun podajImiona() :List<String> {
+        print("podaj imiona")
+        var imiona:List<String> = List<String> (readLine()!!.toInt(),{index -> readLine()!! })
+        // ta list ma parametry podane  zkonsolo 1. jej wielkosc a potem uzupelnia
+        return imiona
+    }
+
+    // musimy implementowac wszytskie metody z interfejsu
+    // INTERFEJS DOSTARCZA OPERACJI ALE NIE DOSTARCZA DANYCH
+    override fun wypiszImiona(imiona: List<String>) {
+        println(imiona)
+
+    }
+
+
+}
 
 
 fun main(vargs: Array<String>) {
 
-
-
+    val mojeDane = MojeDane()
+    var imiona: List<String> = mojeDane.podajImiona();
+    mojeDane.wypiszImiona(imiona)
 
 }
+
+
