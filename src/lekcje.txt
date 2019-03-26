@@ -26,7 +26,9 @@
 
 15 wczytywanie danych z pliku
 16 tablice dwuwymiarowe
-17 wykoszona tablica i zapis do pliku
+17 wykoszona tablica i zapis do pliku, tablica o zmiennej dlugosci i zapis do pliku
+18
+
 
 
 

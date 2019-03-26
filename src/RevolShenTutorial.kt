@@ -4,6 +4,7 @@ import jdk.nashorn.internal.lookup.Lookup
 import java.io.File
 import java.lang.ArithmeticException
 import java.lang.NumberFormatException
+import java.nio.charset.Charset
 import kotlin.math.roundToInt
 import kotlin.math.sqrt
 
@@ -669,7 +670,34 @@ fun main(vargs: Array<String>) {
 */
 
 // ##@$@#@#@##@#@  17 wykoszona tablica i zapis do pliku
+
+fun wczytajPlik(path: String): List<String>{
+    var file: File = File(path)
+    return file.readLines();
+}
+
+
+fun insertIntoList (liczby: List<String>): ArrayList<Int>{
+    var tablicaModyfikowalna: ArrayList<Int> = arrayListOf(); // taka tablica ma zmiennna dlugosc
+    for (i: String in liczby){
+        tablicaModyfikowalna.add(i.toInt())
+    }
+
+    return tablicaModyfikowalna
+
+}
+
+
+fun zapisDoPliku(wynik: Int){
+    var filePath = "C:\\Users\\Gosia_Konrad\\Desktop\\batteryInventory\\kotlinRevolShen\\zapisDanych.txt"
+    var file: File = File(filePath)
+    file.writeText(wynik.toString(), Charset.defaultCharset())
+
+
+}
 fun main(vargs: Array<String>) {
 
+
+    zapisDoPliku(22222)
 
 }
