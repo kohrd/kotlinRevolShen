@@ -11,4 +11,18 @@
    jezeli ma byc dziedziecznie to klasa musi byc open
    ZNAK ZAPYTANIA PO TYPIE ZWRACANYM TO ZNACZY ZE NMOZE BYC NULEM
 
-13
+13 dziedziczenie
+14 modyfikatory dostepu
+    PUBLIC - domyślnie wszytskie są
+    PRIVATE - tylko w obrebie pliku instancje musza byc w tym samym pliku
+    PROTECTED - tylko dla pol, tskie pola beda niedostepne poza klasa? chyba ze w klasach dziedziczacych
+                nie moga byc uzywane przez instancje danej klasy ale instancje klas dziedziczacych
+    INTERNAL
+    z internetow:
+            public 	declarations are visible everywhere
+            private 	visible inside the file containing the declaration
+            internal 	visible inside the same module (a set of Kotlin files compiled together)
+            protected 	not available for packages (used for subclasses)
+
+
+

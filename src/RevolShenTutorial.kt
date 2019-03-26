@@ -360,6 +360,7 @@ fun main(vargs: Array<String>) {
 }
 */
 // zadanie prowadzacego
+/*
 open class Zwierzak(imie: String, waga: Int, szybkosc: Int, glos: Int, sila: Int) {
     var imie = imie;
     var waga = waga
@@ -472,5 +473,17 @@ fun main(vargs: Array<String>) {
 
     ktoWygra(burek, mruczek)
     ktoWygraNaTypachOgolnych(burek, mruczek)
+
+}
+*/
+
+fun main(vargs: Array<String>) {
+
+    var konrasd: String = "rverver"
+    konrasd = "verwwef";
+
+
+
+
 
 }
