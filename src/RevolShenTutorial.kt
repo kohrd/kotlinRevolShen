@@ -603,7 +603,7 @@ fun main(vargs: Array<String>) {
 
 // ##@$@#@#@##@#@  15 wczytywanie danych z pliku
 
-
+/*
 fun wczytjaPlik(path: String): List<String>{
     var plik: File = File(path)
 
@@ -641,6 +641,35 @@ fun main(vargs: Array<String>) {
 print(policzSredniaPliku(wczytjaPlik(filePath)))
 
 
+
+
+}
+        */
+
+
+
+/*
+// ##@$@#@#@##@#@  16 tablice dwuwymiarowe
+
+fun main(vargs: Array<String>) {
+
+    var tablica2D = Array(2000, {IntArray(1000)})
+
+    for (i: Int in 0 until 2000){
+        for (u: Int in 0 until 1000){
+            tablica2D[i][u] = i * u
+        }
+    }
+
+    for (i: Int in 0 until 2000){
+        for (u: Int in 0 until 1000){
+            println(tablica2D[i][u])
+        }
+    }
+*/
+
+// ##@$@#@#@##@#@  17 wykoszona tablica i zapis do pliku
+fun main(vargs: Array<String>) {
 
 
 }

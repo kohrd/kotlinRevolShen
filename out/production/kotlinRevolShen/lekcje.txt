@@ -25,6 +25,7 @@
             protected 	not available for packages (used for subclasses)
 
 15 wczytywanie danych z pliku
+16 tablice dwuwymiarowe
 
 
 
