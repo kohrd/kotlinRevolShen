@@ -27,7 +27,13 @@
 15 wczytywanie danych z pliku
 16 tablice dwuwymiarowe
 17 wykoszona tablica i zapis do pliku, tablica o zmiennej dlugosci i zapis do pliku
-18
+18  klasy i funkcje abstrakcyjne - klasa abstrakcyjna to taka po ktorej mozna dzidziczyc ale nie mozna stworzyc jej instancji
+    metody abstrakyjne nioe moga miec ciała musza byc nadpisane w klasach potomnych
+            abstract fun jakasFunkcja()
+            override fun funkcjaNadpisanaWklasiePotomnej
+
+
+
 
 
 

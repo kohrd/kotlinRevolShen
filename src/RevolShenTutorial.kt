@@ -669,7 +669,15 @@ fun main(vargs: Array<String>) {
     }
 */
 
+
+
+
+
+
+
+
 // ##@$@#@#@##@#@  17 wykoszona tablica i zapis do pliku
+/*
 
 fun wczytajPlik(path: String): List<String>{
     var file: File = File(path)
@@ -699,5 +707,19 @@ fun main(vargs: Array<String>) {
 
 
     zapisDoPliku(22222)
+
+}
+*/
+
+
+
+
+// ##@$@#@#@##@#@  17 wykoszona tablica i zapis do pliku
+
+
+fun main(vargs: Array<String>) {
+
+
+
 
 }
