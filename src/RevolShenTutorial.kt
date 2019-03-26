@@ -259,6 +259,8 @@ fun main(vargs: Array<String>) {
 */
 
 
+/*
+// ##@$@#@#@##@#@  12 OOP
 class Pies(waga: Int, glos: Int) {
     var waga = waga;
     var glos = glos;
@@ -291,5 +293,184 @@ fun main(vargs: Array<String>) {
 
     walkiPsow(azor, burek)
 
+*/
+
+// ##@$@#@#@##@#@  13 dziedziczenie
+/*
+
+open class Postac(imie: String) { // klasa open tzn ze mozna po niej dziedziczyc
+    var imie = imie
+    var hp = 100
+    var sila = 100
+    var inteligencja = 10
+    var kondycja = 100
+    var zrecznosc = 10
+    var bystrosc = 10
+
+    fun atakuj(postac: Postac) {
+        println("zadales obrazenia przciwnikowi ${postac.imie} rowne ${this.sila} ")
+    }
+
+    fun uzyjPotkiHP() {
+        println("przywrociles sobie 30hp")
+        this.hp = this.hp + 30
+    }
+}
+
+class Mag(imie: String) : Postac(imie) {
+
+    var mana = 100
+
+
+    fun rzucZaklecie(postac: Postac) {
+        postac.sila = postac.sila - 10
+
+        //  skonczone 14:15
+    }
+}
+
+class Wojownik(imie: String) : Postac(imie) {
+
+    var wytrzymalosc = 100
+
+    fun uderzMieczem(postac: Postac) {
+        postac.kondycja = postac.kondycja -20;
+        println("uderzyles przeciwnika mieczem zabrales mu ${postac.kondycja} energii")
+    }
+
+}
+
+
+
+fun main(vargs: Array<String>) {
+
+    var andrzej: Wojownik = Wojownik("Andrzej");
+    var artur: Mag = Mag("Artur")
+
+    println("andrzej.kondycja ${andrzej.kondycja}")
+    println("andrzej.sila ${andrzej.sila}")
+    println("artur.kondycja ${artur.kondycja}")
+    println("artur.sila ${artur.sila}")
+    andrzej.uderzMieczem(artur)
+    artur.rzucZaklecie(andrzej)
+    println("andrzej.kondycja ${andrzej.kondycja}")
+    println("andrzej.sila ${andrzej.sila}")
+    println("artur.kondycja ${artur.kondycja}")
+    println("artur.sila ${artur.sila}")
+}
+*/
+// zadanie prowadzacego
+open class Zwierzak(imie: String, waga: Int, szybkosc: Int, glos: Int, sila: Int) {
+    var imie = imie;
+    var waga = waga
+    var szybkosc = szybkosc
+    var glos = glos
+    var sila = sila
+}
+
+class Kot (imie: String, waga: Int, szybkosc: Int, glos: Int, sila: Int) : Zwierzak (imie, waga, szybkosc, glos, sila){
+
+}
+
+class Pies (imie: String, waga: Int, szybkosc: Int, glos: Int, sila: Int) : Zwierzak (imie, waga, szybkosc, glos, sila){
+
+}
+
+fun ktoWygra(pies: Pies, kot: Kot): Zwierzak? { // zwraca Zwierzaka ale moze tez byc null jesli jest remis
+    var punktyPsa = 0
+    var punktyKota = 0
+
+    if (pies.waga > kot.waga)punktyPsa++
+    else if (pies.waga == kot.waga){
+        punktyKota++
+        punktyPsa++
+    }else punktyKota++
+
+    if (pies.sila > kot.sila)punktyPsa++
+    else if (pies.sila == kot.sila){
+        punktyKota++
+        punktyPsa++
+    }else punktyKota++
+
+
+    if (pies.szybkosc > kot.szybkosc)punktyPsa++
+    else if (pies.szybkosc == kot.szybkosc){
+        punktyKota++
+        punktyPsa++
+    }else punktyKota++
+
+    if (pies.glos > kot.glos)punktyPsa++
+    else if (pies.glos == kot.glos){
+        punktyKota++
+        punktyPsa++
+    }else punktyKota++
+
+
+    if(punktyKota > punktyPsa) {
+        println("ktoWygra wygral ${kot.imie}")
+        return kot
+    }
+    else if (punktyKota < punktyPsa) {
+        println("ktoWygra wygral ${pies.imie}")
+        return pies
+    }else return null // w przypaku remisu
+
+
+
+
+}
+
+
+fun ktoWygraNaTypachOgolnych(zwierzak1: Zwierzak, zwierzak2: Zwierzak): Zwierzak? { // zwraca Zwierzaka ale moze tez byc null jesli jest remis
+    // a to metoda na typach ogolnych nadrzednych
+    var punktyPsa = 0
+    var punktyKota = 0
+
+    if (zwierzak1.waga > zwierzak2.waga)punktyPsa++
+    else if (zwierzak1.waga == zwierzak2.waga){
+        punktyKota++
+        punktyPsa++
+    }else punktyKota++
+
+    if (zwierzak1.sila > zwierzak2.sila)punktyPsa++
+    else if (zwierzak1.sila == zwierzak2.sila){
+        punktyKota++
+        punktyPsa++
+    }else punktyKota++
+
+
+    if (zwierzak1.szybkosc > zwierzak2.szybkosc)punktyPsa++
+    else if (zwierzak1.szybkosc == zwierzak2.szybkosc){
+        punktyKota++
+        punktyPsa++
+    }else punktyKota++
+
+    if (zwierzak1.glos > zwierzak2.glos)punktyPsa++
+    else if (zwierzak1.glos == zwierzak2.glos){
+        punktyKota++
+        punktyPsa++
+    }else punktyKota++
+
+
+    if(punktyKota > punktyPsa) {
+        println("ktoWygraNaTypachOgolnych wygral ${zwierzak2.imie}")
+        return zwierzak2
+    }
+    else if (punktyKota < punktyPsa) {
+        println("ktoWygraNaTypachOgolnych wygral ${zwierzak1.imie}")
+        return zwierzak1
+    }else return null // w przypaku remisu
+
+
+
+
+}
+
+fun main(vargs: Array<String>) {
+    var mruczek: Kot = Kot("mruczek", 20, 100, 20, 20)
+    var burek: Pies = Pies("burek", 10, 50, 80, 10)
+
+    ktoWygra(burek, mruczek)
+    ktoWygraNaTypachOgolnych(burek, mruczek)
 
 }

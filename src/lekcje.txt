@@ -7,5 +7,8 @@
 9 tablica i petla for each
 10 wlasne funkcje parametr w definicji a argument to to dajemy w uzyciu
 11 try catch
-12 podstawy oop
+12 podstawy oop w kotlinie wszytskie klasy somyslnie sa finalne i nie mozna po nich dziedziczyc,
+   jezeli ma byc dziedziecznie to klasa musi byc open
+   ZNAK ZAPYTANIA PO TYPIE ZWRACANYM TO ZNACZY ZE NMOZE BYC NULEM
+
 13
